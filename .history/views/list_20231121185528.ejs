@@ -16,9 +16,12 @@
         <li>None</li>
         <li>None</li>
         <li>None</li>
-        <% for ( var i=0 ; i < newListItems.length ; i++ ) { %>
-        <li><%= newListItems[i] %></li>
-        <% } %>
+        <%items.foreach(function (newItem) {%>
+
+        <%<li><%= newListItem %></li>%>
+
+        <%});%>
+        
     </ul>
 
     <form action="/" method="post">
