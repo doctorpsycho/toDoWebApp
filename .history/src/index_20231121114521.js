@@ -19,14 +19,13 @@ app.get( "/" , function ( req , res ) {
     
     var day = today.toLocaleDateString("US-en" , options);
     console.log(day);
-    res.render("list" , {kindOfDay : day , newListItem : items });
+    res.render("list" , {newListItem : item , kindOfDay : day});
    });
 
    app.post("/" , function( req , res ){
      var item = req.body.newItem;
      console.log(item);
      items.push(item);
-     res.redirect('/');
    //   res.render("list" , { newListItem : item })
   });
    

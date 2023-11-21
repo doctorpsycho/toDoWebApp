@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejs</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+</head>
+<body>
+
+    <% if ( kindOfDay === 2 || kindOfDay === 6 ) { %>
+
+    <h1 style="color: blue;">It's <%= kindOfDay %>! To do list</h1>
+    <p>Need to work</p>
+
+<%  }  else { %>
+
+    <h1 style="color: brown;">It's <%= kindOfDay %>! </h1>
+    <p>Need to work</p>
+<% } %>
+
+
+<script src="index.js"></script>
+</body>
+</html>
