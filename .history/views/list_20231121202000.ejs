@@ -9,20 +9,21 @@
 </head>
 <body>
 
-    <h1> <%= calendar %> </h1>
+    <h1>It's <%= kindOfDay %>! </h1> 
 
     <ul>
-        <% for ( var i = 0 ; i < toDo.length ; i++ ) { %>
-            <li> <%= toDo[i] %> </li>
+        <% for ( var i=0 ; i < newTodo.length ; i++ ) { %>
+        <li><%= newTodo[i] %></li>
         <% } %>
     </ul>
 
     <form action="/" method="post">
-        <input type="text" placeholder="Add new task" name="newTask">
-        <button type="submit">Add</button>
+        <input type="text" placeholder="To-Do" name="newTodoItem">
+        <button type="submit">Submit</button>
     </form>
 
-<script src="../src/index.js"></script>
+
+<script src="index.js"></script>
 </body>
 </html>
 

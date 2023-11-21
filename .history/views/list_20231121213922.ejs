@@ -12,8 +12,10 @@
     <h1> <%= calendar %> </h1>
 
     <ul>
-        <% for ( var i = 0 ; i < toDo.length ; i++ ) { %>
-            <li> <%= toDo[i] %> </li>
+        <li>None</li>
+        <li>None</li>
+        <% for ( var i = 0 ; i < newToDo.length ; i++ ) { %>
+            <li> <%= newToDo[i] %> </li>
         <% } %>
     </ul>
 
@@ -22,7 +24,7 @@
         <button type="submit">Add</button>
     </form>
 
-<script src="../src/index.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
 

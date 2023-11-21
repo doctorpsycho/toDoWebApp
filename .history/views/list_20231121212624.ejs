@@ -12,17 +12,16 @@
     <h1> <%= calendar %> </h1>
 
     <ul>
-        <% for ( var i = 0 ; i < toDo.length ; i++ ) { %>
-            <li> <%= toDo[i] %> </li>
+        <% for ( var i = 0 ; i < array.length ; i++ ) { %>
+            <li> <%= toDo %> </li>
         <% } %>
     </ul>
 
     <form action="/" method="post">
         <input type="text" placeholder="Add new task" name="newTask">
-        <button type="submit">Add</button>
     </form>
 
-<script src="../src/index.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
 

@@ -1,12 +1,16 @@
+
 // Installing required packages
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 app.set ("view engine" , "ejs");
+
 app.use(bodyParser.urlencoded({ extended : true }) );
 
-// Declaring variables and getting & formatting date
+// Declaring variables
 var array = [];
+
+// getting & formatting date
 var date = new Date();
 var options =  {
   weekday : "long",
@@ -17,6 +21,7 @@ today = date.toLocaleDateString( "en-US" , options );
 
 // Displaying initial page
 app.get("/" , function ( req ,res ){
+  console.log(today);
   res.render("list" , { calendar : today , toDo : array });
 
 });
@@ -24,8 +29,9 @@ app.get("/" , function ( req ,res ){
 // handling input from post request
 app.post("/" , function ( req , res ){
   var toDo = req.body.newTask;
+  console.log(toDo);
   array.push(toDo);
-  res.redirect("/");
+  console.log(array);
 });
 
 // Hosting server
