@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejs</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="text-center">
+            <h1> <%= calendar %> </h1>
+
+            <ul>
+                <li>None</li>
+                <li>None</li>
+                <% for ( var i = 0 ; i < toDo.length ; i++ ) { %>
+                    <li> <%= array[i] %> </li>
+                <% } %>
+            </ul>
+
+            <form action="/" method="post">
+                <input type="text" placeholder="Add new task" name="newTask" class="border rounded px-2 py-1">
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add</button>
+            </form>
+        </div>
+    </div>
+
+<script src="index.js"></script>
+</body>
+</html>

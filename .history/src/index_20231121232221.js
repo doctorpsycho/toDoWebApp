@@ -5,10 +5,10 @@ const bodyParser = require("body-parser");
 app.set ("view engine" , "ejs");
 app.use(bodyParser.urlencoded({ extended : true }) );
 
-// Declaring variables and getting & formatting date
-var array = [];
-var date = new Date();
-var options =  {
+// Declaring letiables and getting & formatting date
+let array = [];
+let date = new Date();
+let options =  {
   weekday : "long",
   day : "numeric",
   month : "long"
@@ -23,7 +23,7 @@ app.get("/" , function ( req ,res ){
 
 // handling input from post request
 app.post("/" , function ( req , res ){
-  var toDo = req.body.newTask;
+  let toDo = req.body.newTask;
   array.push(toDo);
   res.redirect("/");
 });
