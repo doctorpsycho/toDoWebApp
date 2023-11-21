@@ -17,14 +17,15 @@ app.get( "/" , function ( req , res ) {
     
     var day = today.toLocaleDateString("US-en" , options);
     console.log(day);
-    res.render("list" , {kindOfDay : day , newTodo : todoList });
+    res.render("list" , {kindOfDay : day , newTodo : TodoList });
    });
 
    app.post("/" , function( req , res ){
-     var newItem = req.body.newTodoItem;
-     console.log(newItem);
-     todoList.push(newItem);
-     res.redirect("/");
+     var item = req.body.newTodoItem;
+     console.log(newTodoItem);
+     todoList.push(newTodoItem);
+     res.redirect('/');
+   //   res.render("list" , { newListItem : item })
   });
    
  app.listen(3001 , function(){

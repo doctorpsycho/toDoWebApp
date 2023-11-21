@@ -5,7 +5,6 @@ app.set( "view engine" , "ejs" );
 
 app.use(bodyParser.urlencoded({extended : true}));
 
-var todoList = [];
 
 app.get( "/" , function ( req , res ) { 
     var today = new Date();
@@ -17,14 +16,15 @@ app.get( "/" , function ( req , res ) {
     
     var day = today.toLocaleDateString("US-en" , options);
     console.log(day);
+    var todoList = [];
     res.render("list" , {kindOfDay : day , newTodo : todoList });
    });
 
    app.post("/" , function( req , res ){
-     var newItem = req.body.newTodoItem;
-     console.log(newItem);
-     todoList.push(newItem);
-     res.redirect("/");
+     var newTodoItem = req.body.newTodoItem;
+     console.log(newTodoItem);
+     todoList.push(newTodoItem);
+     res.redirect('/');
   });
    
  app.listen(3001 , function(){

@@ -21,10 +21,11 @@ app.get( "/" , function ( req , res ) {
    });
 
    app.post("/" , function( req , res ){
-     var newItem = req.body.newTodoItem;
-     console.log(newItem);
-     todoList.push(newItem);
-     res.redirect("/");
+     var newTodoItem = req.body.newTodoItem;
+     console.log(newTodoItem);
+     todoList?.push(newTodoItem);
+     res.redirect('/');
+   //   res.render("list" , { newListItem : item })
   });
    
  app.listen(3001 , function(){

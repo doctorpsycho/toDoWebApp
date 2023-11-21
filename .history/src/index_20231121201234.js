@@ -24,7 +24,7 @@ app.get( "/" , function ( req , res ) {
      var newItem = req.body.newTodoItem;
      console.log(newItem);
      todoList.push(newItem);
-     res.redirect("/");
+     res.redirect('/');
   });
    
  app.listen(3001 , function(){
