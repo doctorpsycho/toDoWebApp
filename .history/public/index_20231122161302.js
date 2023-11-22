@@ -26,7 +26,7 @@ app.get("/", function (req, res) {
 app.post("/", function (req, res) {
   let item = req.body.newItem;
 
-  if (req.body.list === "Work") {
+  if (req.body.list === "work") {
 
     workItems.push(item);
     res.redirect("/work");
@@ -41,7 +41,7 @@ app.post("/", function (req, res) {
 });
 
 app.get("/work", function (req, res) {
-  res.render("list", { listTitle: "Work", newListItems: workItems });
+  res.render("list", { listTitle: "Work List", newListItems: workItems });
 });
 app.listen(3000, function () {
   console.log("Server live at Localhost:3000");

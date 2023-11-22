@@ -16,9 +16,7 @@
 
 
             <h1 class="text-4xl font-bold mb-4 text-center text-gray-800">
-
                 <%= listTitle %>
-                
             </h1>
 
 
@@ -42,11 +40,11 @@
             </ul>
 
             <form action="/" method="post" class="flex items-center justify-center mt-4">
-                <input type="text" placeholder="Add new task" name="newItem" autocomplete="off"
+                <input type="text" placeholder="Add new task" name="newTask" autocomplete="off"
                     class="border rounded px-4 py-2 w-48 focus:outline-none focus:ring focus:border-blue-300">
 
 
-                <button type="submit" name="list" value="<%= listTitle %>"
+                <button type="submit" name="button" value="<%= listTitle %>"
 
 
                     class="bg-blue-500 text-white px-6 py-2 ml-2 rounded hover:bg-blue-600">+</button>
